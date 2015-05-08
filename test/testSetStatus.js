@@ -90,4 +90,18 @@ describe('setStatus', function() {
     });
   });
 
+  it('it sets item.behandlingsStatus to Manual given the right input', function(done) {
+
+    var item = require('./data/manual_alternative_address.json');
+
+    setStatus(item, function(err, data) {
+      if (err) {
+        console.error(err);
+      } else {
+        assert.equal(data.behandlingsStatus, 'Manual');
+      }
+      done();
+    });
+  });
+
 });
