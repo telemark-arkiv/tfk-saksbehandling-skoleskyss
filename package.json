@@ -29,10 +29,8 @@
   "bugs": {
     "url": "http://github.com/telemark/tfk-saksbehandling-skoleskyss/issues"
   },
-  "dependencies": {
-    "mongojs": "^0.18.2"
-  },
   "devDependencies": {
+    "jscs": "^1.13.1",
     "mocha": "^2.2.4"
   }
 }
