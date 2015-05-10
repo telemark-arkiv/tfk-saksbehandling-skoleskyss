@@ -27,41 +27,15 @@ describe('setDistance', function() {
     });
   });
 
-  it('it requires item.skoleAdresse to exists', function(done) {
-
-    var item = {
-      skoleAdresse: false
-    };
-
-    setDistance(item, function(err, data) {
-      assert.throws(function() {
-          if (err) {
-            throw err;
-          } else {
-            console.log(data);
-          }
-        }, function(err) {
-          if ((err instanceof Error) && /Missing required input: item.skoleAdresse/.test(err)) {
-            return true;
-          }
-        },
-        'Unexpected error'
-      );
-      done();
-    });
-  });
-
-
-
   it('it measures the walking distance from registered address', function(done) {
 
-    var item = require('./data/automatic_yes.json');
+    var item = require('./data/automatic_yes_distance.json');
 
     setDistance(item, function(err, data) {
       if (err) {
         console.error(err);
       } else {
-        assert.equal(data.measuredDistance.distanceValue, item.measuredDistanceRegisteredAddress);
+        assert.equal(data.measuredDistanceRegisteredAddress.distanceValue, item.measuredDistanceRegisteredAddress.distanceValue);
       }
       done();
     });

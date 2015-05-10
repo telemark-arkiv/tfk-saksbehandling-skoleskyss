@@ -78,7 +78,7 @@ describe('setStatus', function() {
 
   it('it sets item.behandlingsStatus to Automatic given the right input', function(done) {
 
-    var item = require('./data/automatic_yes.json');
+    var item = require('./data/automatic_no_distance_short.json');
 
     setStatus(item, function(err, data) {
       if (err) {
