@@ -1,15 +1,15 @@
 'use strict';
 
 var assert = require('assert');
-var setStatus = require('../lib/setStatus');
+var setBehandlingsType = require('../lib/setBehandlingsType');
 
-describe('setStatus', function() {
+describe('setBehandlingsType', function() {
 
   it('it requires an item object', function(done) {
 
     var item = false;
 
-    setStatus(item, function(err, data) {
+    setBehandlingsType(item, function(err, data) {
       assert.throws(function() {
           if (err) {
             throw err;
@@ -33,7 +33,7 @@ describe('setStatus', function() {
       sokegrunnlag: false
     };
 
-    setStatus(item, function(err, data) {
+    setBehandlingsType(item, function(err, data) {
       assert.throws(function() {
           if (err) {
             throw err;
@@ -58,7 +58,7 @@ describe('setStatus', function() {
       measuredDistanceRegisteredAddress: false
     };
 
-    setStatus(item, function(err, data) {
+    setBehandlingsType(item, function(err, data) {
       assert.throws(function() {
           if (err) {
             throw err;
@@ -76,29 +76,113 @@ describe('setStatus', function() {
     });
   });
 
-  it('it sets item.behandlingsStatus to Automatic given the right input', function(done) {
+  it('it sets item.behandlingsType to Automatic given the right input', function(done) {
 
-    var item = require('./data/automatic_no_distance_short.json');
+    var item = require('./data/automatic_no_distance_long.json');
 
-    setStatus(item, function(err, data) {
+    setBehandlingsType(item, function(err, data) {
       if (err) {
         throw err;
       } else {
-        assert.equal(data.behandlingsStatus, 'Automatic');
+        assert.equal(data.behandlingsType, 'Automatic');
       }
       done();
     });
   });
 
-  it('it sets item.behandlingsStatus to Manual given the right input', function(done) {
+  it('it sets item.behandlingsType to Automatic given the right input', function(done) {
 
-    var item = require('./data/manual_alternative_address.json');
+    var item = require('./data/automatic_no_distance_short.json');
 
-    setStatus(item, function(err, data) {
+    setBehandlingsType(item, function(err, data) {
       if (err) {
         throw err;
       } else {
-        assert.equal(data.behandlingsStatus, 'Manual');
+        assert.equal(data.behandlingsType, 'Automatic');
+      }
+      done();
+    });
+  });
+
+  it('it sets item.behandlingsType to Automatic given the right input', function(done) {
+
+    var item = require('./data/automatic_yes_boat.json');
+
+    setBehandlingsType(item, function(err, data) {
+      if (err) {
+        throw err;
+      } else {
+        assert.equal(data.behandlingsType, 'Automatic');
+      }
+      done();
+    });
+  });
+
+  it('it sets item.behandlingsType to Automatic given the right input', function(done) {
+
+    var item = require('./data/automatic_yes_distance.json');
+
+    setBehandlingsType(item, function(err, data) {
+      if (err) {
+        throw err;
+      } else {
+        assert.equal(data.behandlingsType, 'Automatic');
+      }
+      done();
+    });
+  });
+
+  it('it sets item.behandlingsType to Manual given the right input', function(done) {
+
+    var item = require('./data/manual_alternative_address.json');
+
+    setBehandlingsType(item, function(err, data) {
+      if (err) {
+        throw err;
+      } else {
+        assert.equal(data.behandlingsType, 'Manual');
+      }
+      done();
+    });
+  });
+
+  it('it sets item.behandlingsType to Manual given the right input', function(done) {
+
+    var item = require('./data/manual_distance.json');
+
+    setBehandlingsType(item, function(err, data) {
+      if (err) {
+        throw err;
+      } else {
+        assert.equal(data.behandlingsType, 'Manual');
+      }
+      done();
+    });
+  });
+
+  it('it sets item.behandlingsType to Manual given the right input', function(done) {
+
+    var item = require('./data/manual_reason_other.json');
+
+    setBehandlingsType(item, function(err, data) {
+      if (err) {
+        throw err;
+      } else {
+        assert.equal(data.behandlingsType, 'Manual');
+      }
+      done();
+    });
+  });
+
+  it('it sets item.behandlingsType to Manual given the right input', function(done) {
+
+    var item = require('./data/manual_school_outside_county.json');
+
+    setBehandlingsType(item, function(err, data) {
+      if (err) {
+        throw err;
+      } else {
+        assert.equal(data.behandlingsType, 'Manual');
       }
       done();
     });

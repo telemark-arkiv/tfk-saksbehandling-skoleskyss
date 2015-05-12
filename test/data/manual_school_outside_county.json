@@ -35,6 +35,21 @@
   "eksternSkoleNavn": "Færder videregående skole",
   "eksternSkoleAdresse": "Banebakken 35, 3127 Tønsberg",
   "termsAccepted": "",
+  "measuredDistanceRegisteredAddress": {
+    "index": null,
+    "distance": "98.8 km",
+    "distanceValue": 98790,
+    "duration": "20 hours 14 mins",
+    "durationValue": 72838,
+    "origin": "Kjærlighetsstien 24, 3681 Notodden, Norway",
+    "destination": "Banebakken 35, 3127 Tønsberg, Norway",
+    "mode": "walking",
+    "units": "metric",
+    "language": "en",
+    "avoid": null,
+    "sensor": false,
+    "directionsEmbedUrl": "https://www.google.com/maps/embed/v1/directions?key=AIzaSyAu4oe2bKCeP4AnAyo78KL_XZvrS-WVIcw&mode=walking&origin=Kjærlighetsstien 24, 3681 Notodden&destination=Banebakken 35, 3127 Tønsberg"
+  },
   "behandlingsType": "Manual",
   "behandlingsResultat": "Unknown"
 }
