@@ -51,10 +51,10 @@ describe('setStatus', function() {
     });
   });
 
-  it('it requires item.measuredDistanceRegisteredAddress to exists', function(done) {
+  it('it requires item.measuredDistanceRegisteredAddress to exists if sokegrunnlag is Avstand til skole', function(done) {
 
     var item = {
-      sokegrunnlag: true,
+      sokegrunnlag: 'Avstand til skole',
       measuredDistanceRegisteredAddress: false
     };
 
@@ -82,7 +82,7 @@ describe('setStatus', function() {
 
     setStatus(item, function(err, data) {
       if (err) {
-        console.error(err);
+        throw err;
       } else {
         assert.equal(data.behandlingsStatus, 'Automatic');
       }
@@ -96,7 +96,7 @@ describe('setStatus', function() {
 
     setStatus(item, function(err, data) {
       if (err) {
-        console.error(err);
+        throw err;
       } else {
         assert.equal(data.behandlingsStatus, 'Manual');
       }

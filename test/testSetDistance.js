@@ -33,7 +33,7 @@ describe('setDistance', function() {
 
     setDistance(item, function(err, data) {
       if (err) {
-        console.error(err);
+        throw err;
       } else {
         assert.equal(data.measuredDistanceRegisteredAddress.distanceValue, item.measuredDistanceRegisteredAddress.distanceValue);
       }

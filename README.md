@@ -15,3 +15,6 @@ $ npm run setup
 ```
 $ npm test
 ```
+
+## Bruk
+
