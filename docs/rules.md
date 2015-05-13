@@ -5,7 +5,7 @@
 - alle som søker med bakgrunn i båt/ferge
 
 ### Innvilges
-- alle med båt/ferge (innefor definerte postnr)
+- alle med båt/ferge (innenfor definerte postnr)
 - alle med avstand over 6500
 
 ### Avslag
