@@ -32,5 +32,9 @@
   "devDependencies": {
     "jscs": "^1.13.1",
     "mocha": "^2.2.4"
+  },
+  "dependencies": {
+    "seeiendom": "^1.0.0",
+    "wgs84-util": "^1.0.3"
   }
 }
