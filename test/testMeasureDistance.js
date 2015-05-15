@@ -1,7 +1,5 @@
 'use strict';
 
-'use strict';
-
 var assert = require('assert');
 var measureDistance = require('../lib/measureDistance');
 
