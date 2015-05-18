@@ -12,6 +12,9 @@
   "alternativAdresseBnr": "93",
   "alternativAdresseKommunenr": "0807",
   "alternativAdresseKommuneNavn": "",
+  "skoleAdresse": "Gymnasbakken 23, 3802 Bø",
+  "eksternSkoleAdresse": "",
+  "schoolAddresseForMeasurement": "Gymnasbakken 23, 3802 Bø",
   "registeredGnrBnrData": {
     "ID": "41515792",
     "TITTEL": "0806-60/77",

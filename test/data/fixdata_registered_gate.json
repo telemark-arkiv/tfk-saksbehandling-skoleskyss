@@ -12,5 +12,8 @@
   "alternativAdresseBnr": "",
   "alternativAdresseKommunenr": "",
   "alternativAdresseKommuneNavn": "",
+  "skoleAdresse": "Gymnasbakken 23, 3802 Bø",
+  "eksternSkoleAdresse": "",
+  "schoolAddresseForMeasurement": "Gymnasbakken 23, 3802 Bø",
   "registeredAddressForMeasurement": "Kjærlighetsstien 24, 3681 Notodden"
 }
