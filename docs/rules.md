@@ -23,7 +23,7 @@
 - alle som søker med annen adresse i tillegg til folkeregistrert adresse
 - alle som har avstand mellom 5500 - 6500 til skolen
 - alle som er 26 år ila inneværende år
-- alle med båt/ferge (innenfor definerte postnummer)
-    - 3950 Brevik
-    - 3770 Kragerø
-    - 3788 Stabbestad
+- alle med båt/ferge (utenfor definerte postnummer)
+    - 3780 Skåtøy
+    - 3781 Jomfruland
+    - 3783 Kragerø skjærgård
