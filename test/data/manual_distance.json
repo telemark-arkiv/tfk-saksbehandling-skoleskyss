@@ -38,7 +38,87 @@
   "busskortnummer": "",
   "eksternSkoleNavn": "",
   "eksternSkoleAdresse": "",
-  "termsAccepted": "",
+  "termsAccepted": true,
+  "geocodedRegisteredAddress": {
+    "address_components": [
+      {
+        "long_name": "150",
+        "short_name": "150",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Håtveitvegen",
+        "short_name": "Håtveitvegen",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Gvarv",
+        "short_name": "Gvarv",
+        "types": [
+          "postal_town"
+        ]
+      },
+      {
+        "long_name": "Sauherad",
+        "short_name": "Sauherad",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Telemark",
+        "short_name": "Telemark",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Norway",
+        "short_name": "NO",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "3810",
+        "short_name": "3810",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_address": "Håtveitvegen 150, 3810 Gvarv, Norway",
+    "geometry": {
+      "location": {
+        "lat": 59.3941629,
+        "lng": 9.1428556
+      },
+      "location_type": "ROOFTOP",
+      "viewport": {
+        "northeast": {
+          "lat": 59.3955118802915,
+          "lng": 9.144204580291504
+        },
+        "southwest": {
+          "lat": 59.39281391970849,
+          "lng": 9.1415066197085
+        }
+      }
+    },
+    "partial_match": true,
+    "place_id": "ChIJ8Ylo2LlJR0YRXoNCVnIcJHI",
+    "types": [
+      "street_address"
+    ]
+},
+  "geocodedAlternativeAddress": "",
   "measuredDistanceRegisteredAddress": {
     "index": null,
     "distance": "6.3 km",

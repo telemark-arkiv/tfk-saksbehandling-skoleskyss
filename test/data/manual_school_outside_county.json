@@ -37,7 +37,84 @@
   "busskortnummer": "",
   "eksternSkoleNavn": "Færder videregående skole",
   "eksternSkoleAdresse": "Banebakken 35, 3127 Tønsberg",
-  "termsAccepted": "",
+  "termsAccepted": true,
+  "geocodedRegisteredAddress": {
+    "address_components": [
+      {
+        "long_name": "24",
+        "short_name": "24",
+        "types": ["street_number"]
+      },
+      {
+        "long_name": "Kjærlighetsstien",
+        "short_name": "Kjærlighetsstien",
+        "types": ["route"]
+      },
+      {
+        "long_name": "Notodden",
+        "short_name": "Notodden",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Notodden",
+        "short_name": "Notodden",
+        "types": ["postal_town"]
+      },
+      {
+        "long_name": "Notodden",
+        "short_name": "Notodden",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Telemark",
+        "short_name": "Telemark",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Norway",
+        "short_name": "NO",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "3681",
+        "short_name": "3681",
+        "types": ["postal_code"]
+      }
+    ],
+    "formatted_address": "Kjærlighetsstien 24, 3681 Notodden, Norway",
+    "geometry": {
+      "location": {
+        "lat": 59.56231789999999,
+        "lng": 9.2843696
+      },
+      "location_type": "ROOFTOP",
+      "viewport": {
+        "northeast": {
+          "lat": 59.5636668802915,
+          "lng": 9.285718580291501
+        },
+        "southwest": {
+          "lat": 59.56096891970849,
+          "lng": 9.283020619708498
+        }
+      }
+    },
+    "place_id": "ChIJg-nzI17KQEYRZWRqiBhFPyY",
+    "types": ["street_address"]
+  },
+  "geocodedAlternativeAddress": "",
   "measuredDistanceRegisteredAddress": {
     "index": null,
     "distance": "98.8 km",

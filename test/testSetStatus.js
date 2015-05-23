@@ -30,7 +30,8 @@ describe('setBehandlingsType', function() {
   it('it requires item.sokegrunnlag to exists', function(done) {
 
     var item = {
-      sokegrunnlag: false
+      sokegrunnlag: false,
+      personnummer: "18117147130"
     };
 
     setBehandlingsType(item, function(err, data) {
@@ -55,7 +56,8 @@ describe('setBehandlingsType', function() {
 
     var item = {
       sokegrunnlag: 'Avstand til skole',
-      measuredDistanceRegisteredAddress: false
+      measuredDistanceRegisteredAddress: false,
+      personnummer: "18117147130"
     };
 
     setBehandlingsType(item, function(err, data) {
@@ -76,7 +78,7 @@ describe('setBehandlingsType', function() {
     });
   });
 
-  it('it sets item.behandlingsType to Automatic given the right input', function(done) {
+  it('it sets item.behandlingsType to Automatic given distance as sokegrunnlag', function(done) {
 
     var item = require('./data/automatic_no_distance_long.json');
 
@@ -90,7 +92,7 @@ describe('setBehandlingsType', function() {
     });
   });
 
-  it('it sets item.behandlingsType to Automatic given the right input', function(done) {
+  it('it sets item.behandlingsType to Automatic given distance as sokegrunnlag', function(done) {
 
     var item = require('./data/automatic_no_distance_short.json');
 
@@ -104,7 +106,7 @@ describe('setBehandlingsType', function() {
     });
   });
 
-  it('it sets item.behandlingsType to Automatic given the right input', function(done) {
+  it('it sets item.behandlingsType to Automatic given boat as sokegrunnlag', function(done) {
 
     var item = require('./data/automatic_yes_boat.json');
 
@@ -118,7 +120,7 @@ describe('setBehandlingsType', function() {
     });
   });
 
-  it('it sets item.behandlingsType to Automatic given the right input', function(done) {
+  it('it sets item.behandlingsType to Automatic given distance as sokegrunnlag', function(done) {
 
     var item = require('./data/automatic_yes_distance.json');
 
@@ -132,7 +134,7 @@ describe('setBehandlingsType', function() {
     });
   });
 
-  it('it sets item.behandlingsType to Manual given the right input', function(done) {
+  it('it sets item.behandlingsType to Manual given alternative address', function(done) {
 
     var item = require('./data/manual_alternative_address.json');
 
@@ -146,7 +148,7 @@ describe('setBehandlingsType', function() {
     });
   });
 
-  it('it sets item.behandlingsType to Manual given the right input', function(done) {
+  it('it sets item.behandlingsType to Manual given measured distance', function(done) {
 
     var item = require('./data/manual_distance.json');
 
@@ -160,7 +162,7 @@ describe('setBehandlingsType', function() {
     });
   });
 
-  it('it sets item.behandlingsType to Manual given the right input', function(done) {
+  it('it sets item.behandlingsType to Manual given Annet as sokegrunnlag', function(done) {
 
     var item = require('./data/manual_reason_other.json');
 
@@ -174,7 +176,7 @@ describe('setBehandlingsType', function() {
     });
   });
 
-  it('it sets item.behandlingsType to Manual given the right input', function(done) {
+  it('it sets item.behandlingsType to Manual given school outside county', function(done) {
 
     var item = require('./data/manual_school_outside_county.json');
 
