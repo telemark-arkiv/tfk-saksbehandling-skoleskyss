@@ -16,6 +16,7 @@
 
 ### Avslag
 - alle med avstand under 5500
+- alle som ikke har folkeregistrert adresse i Telemark
 
 ## Manuell
 - alle som søker med bakgrunn i annen årsak
