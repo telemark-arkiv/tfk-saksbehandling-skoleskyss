@@ -2,7 +2,7 @@
 
 function doSaksbehandling(item, callback) {
   var fixAddresses = require('./lib/fixAddresses');
-  var setBehandlingsType = require('./lib/setBehandlingstype');
+  var setBehandlingsType = require('./lib/setBehandlingsType');
 
   if (!item) {
     return callback(new Error('Missing required input: item object'), null);
