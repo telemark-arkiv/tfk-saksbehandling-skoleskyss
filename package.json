@@ -1,6 +1,6 @@
 {
   "name": "tfk-saksbehandling-skoleskyss",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Automatisk saksbehandling av henvendelser om skoleskyss",
   "author": {
     "name": "Geir Gåsodden",
