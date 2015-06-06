@@ -1,12 +1,14 @@
 {
   "name": "tfk-saksbehandling-skoleskyss",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "Automatisk saksbehandling av henvendelser om skoleskyss",
+  "private": true,
   "author": {
     "name": "Geir Gåsodden",
     "email": "geir.gasodden@pythonia.no",
     "url": "https://github.com/zrrrzzt"
   },
+  "license": "MIT",
   "main": "index.js",
   "engines": {
     "node": ">=0.12.0"
@@ -35,7 +37,8 @@
   },
   "dependencies": {
     "seeiendom": "^1.0.0",
-    "wgs84-util": "^1.0.3",
-    "dsf": "git+https://github.com/telemark/dsf.git"
+    "tfk-dsf": "^1.0.0",
+    "thru": "0.0.2",
+    "wgs84-util": "^1.0.3"
   }
 }

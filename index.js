@@ -16,7 +16,7 @@ function doSaksbehandling(item, callback) {
       if (data.geocodedRegisteredAddress) {
         data.registeredAddress = unpackAddress(data.geocodedRegisteredAddress);
       }
-      setBehandlingsType(data, function(err, result){
+      setBehandlingsType(data, function(err, result) {
         if (err) {
           return callback(err, null);
         } else {
