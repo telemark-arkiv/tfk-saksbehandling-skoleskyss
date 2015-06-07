@@ -1,31 +1,41 @@
 'use strict';
 
-function doSaksbehandling(item, callback) {
-  var fixAddresses = require('./lib/fixAddresses');
-  var setBehandlingsType = require('./lib/setBehandlingsType');
-  var unpackAddress = require('./lib/unpackAddress');
+function createPipeline(item, callback) {
+  var thru = require('thru');
+  var pipeline = thru();
+  var prepareItem = require('./lib/prepareItem');
+  var lookupDSF = require('./lib/lookupDSF');
+  var geocodeFolkeregistrertAdresse = require('./lib/geocodeFolkeregistrertAdresse');
+  var geocodeAlternativAdresse = require('./lib/geocodeAlternativAdresse');
+  var lookupGnrBnrFolkeRegistrert = require('./lib/lookupGnrBnrFolkeregistrert');
+  var lookupGnrBnrAlternative = require('./lib/lookupGnrBnrAlternative');
+  var setMeasurementAddresses = require('./lib/setMeasurementAddresses');
+  var measureDistanceRegistered = require('./lib/measureDistanceRegistered');
+  var measureDistanceAlternative = require('./lib/measureDistanceAlternative');
+  var doSaksbehandling = require('./lib/doSaksbehandling');
+  var cleanupItem = require('./lib/cleanupItem');
+  var writeToFile = require('./lib/writeToFile');
 
-  if (!item) {
-    return callback(new Error('Missing required input: item object'), null);
-  }
+  pipeline
+    .pipe(prepareItem)
+    .pipe(lookupDSF)
+    .pipe(geocodeFolkeregistrertAdresse)
+    .pipe(geocodeAlternativAdresse)
+    .pipe(lookupGnrBnrFolkeRegistrert)
+    .pipe(lookupGnrBnrAlternative)
+    .pipe(setMeasurementAddresses)
+    .pipe(measureDistanceRegistered)
+    .pipe(measureDistanceAlternative)
+    .pipe(doSaksbehandling)
+    .pipe(cleanupItem)
+    .pipe(writeToFile);
 
-  fixAddresses(item, function(error, data){
-    if (error) {
-      return callback(error, null);
-    } else {
-      if (data.geocodedRegisteredAddress) {
-        data.registeredAddress = unpackAddress(data.geocodedRegisteredAddress);
-      }
-      setBehandlingsType(data, function(err, result) {
-        if (err) {
-          return callback(err, null);
-        } else {
-          return callback(null, result);
-        }
-      });
-    }
+  writeToFile.on('finish', function(){
+    return callback(null, 'File ' + item._id + '.json' + ' written.');
   });
+
+  pipeline.write(JSON.stringify(item));
 
 }
 
-module.exports = doSaksbehandling;
+module.exports = createPipeline;
