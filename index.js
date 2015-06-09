@@ -6,7 +6,6 @@ function createPipeline(item, callback) {
   var prepareItem = require('./lib/prepareItem');
   var lookupDSF = require('./lib/lookupDSF');
   var geocodeFolkeregistrertAdresse = require('./lib/geocodeFolkeregistrertAdresse');
-  var geocodeAlternativAdresse = require('./lib/geocodeAlternativAdresse');
   var lookupGnrBnrFolkeRegistrert = require('./lib/lookupGnrBnrFolkeregistrert');
   var lookupGnrBnrAlternative = require('./lib/lookupGnrBnrAlternative');
   var setMeasurementAddresses = require('./lib/setMeasurementAddresses');
@@ -20,7 +19,6 @@ function createPipeline(item, callback) {
     .pipe(prepareItem)
     .pipe(lookupDSF)
     .pipe(geocodeFolkeregistrertAdresse)
-    .pipe(geocodeAlternativAdresse)
     .pipe(lookupGnrBnrFolkeRegistrert)
     .pipe(lookupGnrBnrAlternative)
     .pipe(setMeasurementAddresses)
