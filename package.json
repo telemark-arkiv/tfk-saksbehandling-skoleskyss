@@ -1,6 +1,6 @@
 {
   "name": "tfk-saksbehandling-skoleskyss",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "Automatisk saksbehandling av henvendelser om skoleskyss",
   "private": true,
   "author": {
@@ -39,6 +39,7 @@
     "seeiendom": "^1.0.0",
     "tfk-dsf": "^1.0.0",
     "thru": "0.0.2",
+    "trim": "0.0.1",
     "wgs84-util": "^1.0.3"
   }
 }
