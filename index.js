@@ -9,7 +9,8 @@ function createPipeline(item, callback) {
   var geocodeAlternativAdresse = require('./lib/geocodeAlternativAdresse');
   var lookupGnrBnrFolkeRegistrert = require('./lib/lookupGnrBnrFolkeregistrert');
   var lookupGnrBnrAlternative = require('./lib/lookupGnrBnrAlternative');
-  var checkNSBTransport = require('./lib/checkNSBTransport')
+  var checkNSBTransport = require('./lib/checkNSBTransport');
+  var checkTBRTransport = require('./lib/checkTBRTransport');
   var setMeasurementAddresses = require('./lib/setMeasurementAddresses');
   var measureDistanceRegistered = require('./lib/measureDistanceRegistered');
   var measureDistanceAlternative = require('./lib/measureDistanceAlternative');
@@ -25,6 +26,7 @@ function createPipeline(item, callback) {
     .pipe(lookupGnrBnrFolkeRegistrert)
     .pipe(lookupGnrBnrAlternative)
     .pipe(checkNSBTransport)
+    .pipe(checkTBRTransport)
     .pipe(setMeasurementAddresses)
     .pipe(measureDistanceRegistered)
     .pipe(measureDistanceAlternative)
@@ -32,7 +34,7 @@ function createPipeline(item, callback) {
     .pipe(cleanupItem)
     .pipe(writeToFile);
 
-  writeToFile.on('finish', function(){
+  writeToFile.on('finish', function() {
     return callback(null, 'File ' + item._id + '.json' + ' written.');
   });
 
