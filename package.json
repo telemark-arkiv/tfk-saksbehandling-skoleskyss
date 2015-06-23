@@ -1,6 +1,6 @@
 {
   "name": "tfk-saksbehandling-skoleskyss",
-  "version": "3.4.2",
+  "version": "3.5.2",
   "description": "Automatisk saksbehandling av henvendelser om skoleskyss",
   "private": true,
   "author": {
@@ -42,6 +42,7 @@
     "trim": "0.0.1",
     "wgs84-util": "^1.0.3",
     "tfk-saksbehandling-skoleskyss-nsb": "git+https://github.com/telemark/tfk-saksbehandling-skoleskyss-nsb.git",
-    "tfk-saksbehandling-skoleskyss-tbr": "git+https://github.com/telemark/tfk-saksbehandling-skoleskyss-tbr.git"
+    "tfk-saksbehandling-skoleskyss-tbr": "git+https://github.com/telemark/tfk-saksbehandling-skoleskyss-tbr.git",
+    "tfk-saksbehandling-skoleskyss-fara": "git+https://github.com/telemark/tfk-saksbehandling-skoleskyss-fara.git"
   }
 }

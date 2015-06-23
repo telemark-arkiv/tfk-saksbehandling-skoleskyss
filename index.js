@@ -11,6 +11,7 @@ function createPipeline(item, callback) {
   var lookupGnrBnrAlternative = require('./lib/lookupGnrBnrAlternative');
   var checkNSBTransport = require('./lib/checkNSBTransport');
   var checkTBRTransport = require('./lib/checkTBRTransport');
+  var checkFARATransport = require('./lib/checkFARATransport');
   var setMeasurementAddresses = require('./lib/setMeasurementAddresses');
   var measureDistanceRegistered = require('./lib/measureDistanceRegistered');
   var measureDistanceAlternative = require('./lib/measureDistanceAlternative');
@@ -27,6 +28,7 @@ function createPipeline(item, callback) {
     .pipe(lookupGnrBnrAlternative)
     .pipe(checkNSBTransport)
     .pipe(checkTBRTransport)
+    .pipe(checkFARATransport)
     .pipe(setMeasurementAddresses)
     .pipe(measureDistanceRegistered)
     .pipe(measureDistanceAlternative)
