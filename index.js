@@ -5,10 +5,6 @@ function createPipeline(item, callback) {
   var pipeline = thru();
   var prepareItem = require('./lib/prepareItem');
   var lookupDSF = require('./lib/lookupDSF');
-  var geocodeFolkeregistrertAdresse = require('./lib/geocodeFolkeregistrertAdresse');
-  var geocodeAlternativAdresse = require('./lib/geocodeAlternativAdresse');
-  var lookupGnrBnrFolkeRegistrert = require('./lib/lookupGnrBnrFolkeregistrert');
-  var lookupGnrBnrAlternative = require('./lib/lookupGnrBnrAlternative');
   var checkNSBTransport = require('./lib/checkNSBTransport');
   var checkTBRTransport = require('./lib/checkTBRTransport');
   var checkFARATransport = require('./lib/checkFARATransport');
@@ -22,10 +18,6 @@ function createPipeline(item, callback) {
   pipeline
     .pipe(prepareItem)
     .pipe(lookupDSF)
-    .pipe(geocodeFolkeregistrertAdresse)
-    .pipe(geocodeAlternativAdresse)
-    .pipe(lookupGnrBnrFolkeRegistrert)
-    .pipe(lookupGnrBnrAlternative)
     .pipe(checkNSBTransport)
     .pipe(checkTBRTransport)
     .pipe(checkFARATransport)
