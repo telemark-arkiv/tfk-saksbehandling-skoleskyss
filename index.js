@@ -5,6 +5,7 @@ function createPipeline(item, callback) {
   var pipeline = thru();
   var prepareItem = require('./lib/prepareItem');
   var lookupDSF = require('./lib/lookupDSF');
+  var lookupSeeiendom = require('./lib/lookupSeeiendom');
   var checkNSBTransport = require('./lib/checkNSBTransport');
   var checkTBRTransport = require('./lib/checkTBRTransport');
   var checkFARATransport = require('./lib/checkFARATransport');
@@ -18,6 +19,7 @@ function createPipeline(item, callback) {
   pipeline
     .pipe(prepareItem)
     .pipe(lookupDSF)
+    .pipe(lookupSeeiendom)
     .pipe(checkNSBTransport)
     .pipe(checkTBRTransport)
     .pipe(checkFARATransport)
