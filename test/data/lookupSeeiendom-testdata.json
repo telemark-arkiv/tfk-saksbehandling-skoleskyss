@@ -1,0 +1,10 @@
+{
+  "item": {
+    "registeredAddress": {
+      "street": "Fylkesbakken 10",
+      "zip": "3715",
+      "city": "Skien"
+    }
+  },
+  "expectedResult": "9.61178004,59.21585817"
+}
