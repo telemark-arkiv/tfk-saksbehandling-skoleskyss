@@ -1,6 +1,6 @@
 {
   "name": "tfk-saksbehandling-skoleskyss",
-  "version": "8.3.0",
+  "version": "8.4.0",
   "description": "Automatisk saksbehandling av henvendelser om skoleskyss",
   "private": true,
   "author": {
