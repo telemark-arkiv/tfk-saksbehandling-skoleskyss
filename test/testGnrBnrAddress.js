@@ -1,45 +1,45 @@
-'use strict';
+'use strict'
 
-var assert = require('assert');
-var getGnrBnrAddress = require('../lib/getGnrBnrAddress');
+var assert = require('assert')
+var getGnrBnrAddress = require('../lib/getGnrBnrAddress')
 
-describe('getGnrBnrAddress', function() {
+describe('getGnrBnrAddress', function () {
 
-  it('it requires a querystring to exist', function(done) {
+  it('it requires a querystring to exist', function (done) {
 
-    var querystring = false;
+    var querystring = false
 
-    getGnrBnrAddress(querystring, function(err, data) {
-      assert.throws(function() {
+    getGnrBnrAddress(querystring, function (err, data) {
+      assert.throws(function () {
           if (err) {
-            throw err;
+            throw err
           } else {
-            console.log(data);
+            console.log(data)
           }
-        }, function(err) {
+        }, function (err) {
           if ((err instanceof Error) && /Missing required param: querystring/.test(err)) {
-            return true;
+            return true
           }
         },
         'Unexpected error'
-      );
-      done();
-    });
-  });
+      )
+      done()
+    })
+  })
 
-  it('it returns data as expected', function(done) {
+  it('it returns data as expected', function (done) {
 
-    var querystring = '0806-60/77';
+    var querystring = '0806-60/77'
 
-    getGnrBnrAddress(querystring, function(err, data) {
+    getGnrBnrAddress(querystring, function (err, data) {
       if (err) {
-        throw err;
+        throw err
       } else {
-        assert.equal(data.geocoded.lat, 59.21585817);
-        assert.equal(data.geocoded.lng, 9.61178004);
+        assert.equal(data.geocoded.lat, 59.21585817)
+        assert.equal(data.geocoded.lng, 9.61178004)
       }
-      done();
-    });
-  });
+      done()
+    })
+  })
 
-});
+})
