@@ -16,7 +16,7 @@
   "scripts": {
     "setup": "npm install && node setup.js",
     "start": "node index.js",
-    "test": "mocha --reporter spec test/*.js"
+    "test": "standard && mocha --reporter spec test/*.js"
   },
   "keywords": [
     "Telemark fylkeskommune",
@@ -32,8 +32,8 @@
     "url": "http://github.com/telemark/tfk-saksbehandling-skoleskyss/issues"
   },
   "devDependencies": {
-    "jscs": "^1.13.1",
-    "mocha": "^2.2.4"
+    "mocha": "^2.2.4",
+    "standard": "^5.1.0"
   },
   "dependencies": {
     "seeiendom": "^1.0.0",
