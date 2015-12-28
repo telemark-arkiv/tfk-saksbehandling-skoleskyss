@@ -31,6 +31,12 @@
   "bugs": {
     "url": "http://github.com/telemark/tfk-saksbehandling-skoleskyss/issues"
   },
+  "standard": {
+    "global": [
+      "describe",
+      "it"
+    ]
+  },
   "devDependencies": {
     "standard": "^5.4.1",
     "tap": "^2.3.5"

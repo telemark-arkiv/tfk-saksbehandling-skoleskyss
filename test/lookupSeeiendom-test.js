@@ -9,7 +9,7 @@ var testData = require('./data/lookupSeeiendom-testdata.json')
 tap.test('it returns expected result', function (test) {
   var testResult = thru(function (itemString, callback) {
     var item = JSON.parse(itemString)
-    tap.equal(item.registeredAddressGeocoded, testData.expectedResult)
+    tap.equal(item.registeredAddressGeocoded, testData.expectedResult, 'expected result returned')
     test.done()
     return callback(null, 'Success')
   })
