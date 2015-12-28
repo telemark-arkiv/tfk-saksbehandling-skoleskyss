@@ -1,89 +1,49 @@
 'use strict'
 
-var assert = require('assert')
+var tap = require('tap')
 var setDistance = require('../lib/setDistance')
 
-describe('setDistance', function () {
-  it('it requires an item object', function (done) {
-    var item = false
-
-    setDistance(item, function (err, data) {
-      assert.throws(function () {
-        if (err) {
-          throw err
-        } else {
-          console.log(data)
-        }
-      }, function (err) {
-        if ((err instanceof Error) && /Missing required input: item object/.test(err)) {
-          return true
-        }
-      },
-        'Unexpected error'
-      )
-      done()
-    })
+tap.test('it requires an item object', function (test) {
+  var item = false
+  var expectedErrorMessage = 'Missing required input: item object'
+  setDistance(item, function (error, data) {
+    tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+    test.done()
   })
+})
 
-  it('it requires item.schoolAddresseForMeasurement to exist', function (done) {
-    var item = {
-      schoolAddresseForMeasurement: false
+tap.test('it requires item.schoolAddresseForMeasurement to exist', function (test) {
+  var item = {
+    schoolAddresseForMeasurement: false
+  }
+  var expectedErrorMessage = 'Missing required input: item.schoolAddresseForMeasurement'
+  setDistance(item, function (error, data) {
+    tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+    test.done()
+  })
+})
+
+tap.test('it requires item.registeredAddressForMeasurement to exist', function (test) {
+  var item = {
+    schoolAddresseForMeasurement: true,
+    registeredAddressForMeasurement: false
+  }
+  var expectedErrorMessage = 'Missing required input: item.registeredAddressForMeasurement'
+  setDistance(item, function (error, data) {
+    tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+    test.done()
+  })
+})
+
+tap.test('it measures the walking distance from registered address', function (test) {
+  var item = require('./data/automatic_yes_distance.json')
+  item.schoolAddresseForMeasurement = item.skoleAdresse
+  item.registeredAddressForMeasurement = item.folkeregistrertAdresseAdresse
+  setDistance(item, function (error, data) {
+    if (error) {
+      throw error
     }
-
-    setDistance(item, function (err, data) {
-      assert.throws(function () {
-        if (err) {
-          throw err
-        } else {
-          console.log(data)
-        }
-      }, function (err) {
-        if ((err instanceof Error) && /Missing required input: item.schoolAddresseForMeasurement/.test(err)) {
-          return true
-        }
-      },
-        'Unexpected error'
-      )
-      done()
-    })
-  })
-
-  it('it requires item.registeredAddressForMeasurement to exist', function (done) {
-    var item = {
-      schoolAddresseForMeasurement: true,
-      registeredAddressForMeasurement: false
-    }
-
-    setDistance(item, function (err, data) {
-      assert.throws(function () {
-        if (err) {
-          throw err
-        } else {
-          console.log(data)
-        }
-      }, function (err) {
-        if ((err instanceof Error) && /Missing required input: item.registeredAddressForMeasurement/.test(err)) {
-          return true
-        }
-      },
-        'Unexpected error'
-      )
-      done()
-    })
-  })
-
-  it('it measures the walking distance from registered address', function (done) {
-    var item = require('./data/automatic_yes_distance.json')
-    item.schoolAddresseForMeasurement = item.skoleAdresse
-    item.registeredAddressForMeasurement = item.folkeregistrertAdresseAdresse
-
-    setDistance(item, function (err, data) {
-      if (err) {
-        throw err
-      } else {
-        assert.equal(data.measuredDistanceRegisteredAddress.distanceValue, item.measuredDistanceRegisteredAddress.distanceValue)
-      }
-      done()
-    })
+    tap.equal(data.measuredDistanceRegisteredAddress.distanceValue, item.measuredDistanceRegisteredAddress.distanceValue)
+    test.done()
   })
 })
