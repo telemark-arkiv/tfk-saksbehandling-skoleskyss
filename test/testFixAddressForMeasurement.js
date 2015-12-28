@@ -1,92 +1,68 @@
 'use strict'
 
-var assert = require('assert')
+var tap = require('tap')
 var fixAddressForMeasurement = require('../lib/fixAddressForMeasurement')
 
-describe('fixAddressForMeasurement', function () {
-  it('it requires an item object', function (done) {
-    var item = false
-
-    fixAddressForMeasurement(item, function (err, data) {
-      assert.throws(function () {
-        if (err) {
-          throw err
-        } else {
-          console.log(data)
-        }
-      }, function (err) {
-        if ((err instanceof Error) && /Missing required input: item object/.test(err)) {
-          return true
-        }
-      },
-        'Unexpected error'
-      )
-      done()
-    })
+tap.test('it requires an item object', function (test) {
+  var item = false
+  var expectedErrorMessage = 'Missing required input: item object'
+  fixAddressForMeasurement(item, function (error, data) {
+    tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+    test.done()
   })
+})
 
-  it('it returns expected output from input', function (done) {
-    var item = require('./data/fixdata_registered_gate.json')
-
-    fixAddressForMeasurement(item, function (err, data) {
-      if (err) {
-        throw err
-      } else {
-        assert.deepEqual(data, item)
-      }
-      done()
-    })
+tap.test('it returns expected output from input', function (test) {
+  var item = require('./data/fixdata_registered_gate.json')
+  fixAddressForMeasurement(item, function (error, data) {
+    if (error) {
+      throw error
+    }
+    tap.deepEqual(data, item)
+    test.done()
   })
+})
 
-  it('it returns expected output from input', function (done) {
-    var item = require('./data/fixdata_registered_gate_alternative_gate.json')
-
-    fixAddressForMeasurement(item, function (err, data) {
-      if (err) {
-        throw err
-      } else {
-        assert.deepEqual(data, item)
-      }
-      done()
-    })
+tap.test('it returns expected output from input', function (test) {
+  var item = require('./data/fixdata_registered_gate_alternative_gate.json')
+  fixAddressForMeasurement(item, function (error, data) {
+    if (error) {
+      throw error
+    }
+    tap.deepEqual(data, item)
+    test.done()
   })
+})
 
-  it('it returns expected output from input', function (done) {
-    var item = require('./data/fixdata_registered_gnr.json')
-
-    fixAddressForMeasurement(item, function (err, data) {
-      if (err) {
-        throw err
-      } else {
-        assert.deepEqual(data, item)
-      }
-      done()
-    })
+tap.test('it returns expected output from input', function (test) {
+  var item = require('./data/fixdata_registered_gnr.json')
+  fixAddressForMeasurement(item, function (error, data) {
+    if (error) {
+      throw error
+    }
+    tap.deepEqual(data, item)
+    test.done()
   })
+})
 
-  it('it returns expected output from input', function (done) {
-    var item = require('./data/fixdata_registered_gnr_alternative_gate.json')
-
-    fixAddressForMeasurement(item, function (err, data) {
-      if (err) {
-        throw err
-      } else {
-        assert.deepEqual(data, item)
-      }
-      done()
-    })
+tap.test('it returns expected output from input', function (test) {
+  var item = require('./data/fixdata_registered_gnr_alternative_gate.json')
+  fixAddressForMeasurement(item, function (error, data) {
+    if (error) {
+      throw error
+    }
+    tap.deepEqual(data, item)
+    test.done()
   })
+})
 
-  it('it returns expected output from input', function (done) {
-    var item = require('./data/fixdata_registered_gnr_alternative_gnr.json')
-
-    fixAddressForMeasurement(item, function (err, data) {
-      if (err) {
-        throw err
-      } else {
-        assert.deepEqual(data, item)
-      }
-      done()
-    })
+tap.test('it returns expected output from input', function (test) {
+  var item = require('./data/fixdata_registered_gnr_alternative_gnr.json')
+  fixAddressForMeasurement(item, function (error, data) {
+    if (error) {
+      throw error
+    }
+    tap.deepEqual(data, item)
+    test.done()
   })
 })
