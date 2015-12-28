@@ -35,7 +35,6 @@ function createPipeline (item, callback) {
   })
 
   pipeline.write(JSON.stringify(item))
-
 }
 
 module.exports = createPipeline
