@@ -47,7 +47,7 @@
     "tfk-saksbehandling-skoleskyss-fara": "git+https://github.com/telemark/tfk-saksbehandling-skoleskyss-fara.git",
     "tfk-saksbehandling-skoleskyss-nsb": "git+https://github.com/telemark/tfk-saksbehandling-skoleskyss-nsb.git",
     "tfk-saksbehandling-skoleskyss-tbr": "git+https://github.com/telemark/tfk-saksbehandling-skoleskyss-tbr.git",
-    "tfk-utils-fix-address-for-seeiendom": "^1.0.0",
+    "tfk-utils-fix-address-for-seeiendom": "^1.0.1",
     "thru": "0.0.2",
     "trim": "0.0.1",
     "wgs84-util": "^1.0.3"
