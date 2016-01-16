@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "standard": "^5.4.1",
-    "tap": "^2.3.5"
+    "tap": "^5.0.1"
   },
   "dependencies": {
     "seeiendom": "^1.0.0",
