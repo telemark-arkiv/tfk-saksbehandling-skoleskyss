@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/telemark/pindena-proxy.svg?branch=master)](https://travis-ci.org/telemark/tfk-saksbehandling-skoleskyss)
+[![Build Status](https://travis-ci.org/telemark/tfk-saksbehandling-skoleskyss.svg?branch=master)](https://travis-ci.org/telemark/tfk-saksbehandling-skoleskyss)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 # tfk-saksbehandling-skoleskyss
 Node modul for automatisk saksbehandling av henvendelser om skoleskyss.
