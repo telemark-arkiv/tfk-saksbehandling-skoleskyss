@@ -38,18 +38,18 @@
     ]
   },
   "devDependencies": {
-    "standard": "^5.4.1",
-    "tap": "^5.0.1"
+    "standard": "^8.6.0",
+    "tap": "^10.0.2"
   },
   "dependencies": {
-    "seeiendom": "^1.0.0",
-    "tfk-dsf": "^1.0.0",
+    "seeiendom": "^4.0.0",
+    "tfk-dsf": "^2.0.0",
     "tfk-saksbehandling-skoleskyss-fara": "git+https://github.com/telemark/tfk-saksbehandling-skoleskyss-fara.git",
     "tfk-saksbehandling-skoleskyss-nsb": "git+https://github.com/telemark/tfk-saksbehandling-skoleskyss-nsb.git",
     "tfk-saksbehandling-skoleskyss-tbr": "git+https://github.com/telemark/tfk-saksbehandling-skoleskyss-tbr.git",
     "tfk-utils-fix-address-for-seeiendom": "^1.0.1",
     "thru": "0.0.2",
     "trim": "0.0.1",
-    "wgs84-util": "^1.0.3"
+    "wgs84-util": "^3.0.0"
   }
 }
