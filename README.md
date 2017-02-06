@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.org/telemark/tfk-saksbehandling-skoleskyss.svg?branch=master)](https://travis-ci.org/telemark/tfk-saksbehandling-skoleskyss)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 # tfk-saksbehandling-skoleskyss
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/telemark/tfk-saksbehandling-skoleskyss.svg)](https://greenkeeper.io/)
 Node modul for automatisk saksbehandling av henvendelser om skoleskyss.
 
 Modulen er tenkt brukt sammen med [tfk-saksbehandling](https://github.com/telemark/tfk-saksbehandling)
